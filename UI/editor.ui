@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>636</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Symplist - Image Editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-color: rgb(255, 255, 255);
+selection-background-color: rgb(135, 171, 255);
+background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>636</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionexitp"/>
+   </widget>
+   <widget class="QMenu" name="menuFilters">
+    <property name="title">
+     <string>Filters</string>
+    </property>
+    <addaction name="actionCrazy_Rainbow"/>
+    <addaction name="actionPencilSketch"/>
+    <addaction name="actionSepia"/>
+    <addaction name="actionHDR"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuFilters"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRotLeft"/>
+   <addaction name="actionRotRight"/>
+   <addaction name="actionFlip"/>
+   <addaction name="actionInvert"/>
+   <addaction name="actionBrightUp"/>
+   <addaction name="actionBrightDown"/>
+   <addaction name="actionRGBtoRW"/>
+   <addaction name="actionEdges"/>
+   <addaction name="actionBigger"/>
+   <addaction name="actionSmaller"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/undo.jpg</normaloff>icons/undo.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="toolTip">
+    <string>Take a step back</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionRotLeft">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/90rotateleft.jpg</normaloff>icons/90rotateleft.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>RotLeft</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate 90 gradus left</string>
+   </property>
+  </action>
+  <action name="actionRotRight">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/90rotateright.jpg</normaloff>icons/90rotateright.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>RotRight</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate 90 gradus right</string>
+   </property>
+  </action>
+  <action name="actionFlip">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/flip.jpg</normaloff>icons/flip.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Flip</string>
+   </property>
+   <property name="toolTip">
+    <string>Flip the image</string>
+   </property>
+  </action>
+  <action name="actionInvert">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/invert.jpg</normaloff>icons/invert.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Invert</string>
+   </property>
+   <property name="toolTip">
+    <string>Invert the image</string>
+   </property>
+  </action>
+  <action name="actionBrightUp">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/brightUP.jpg</normaloff>icons/brightUP.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>BrightUp</string>
+   </property>
+   <property name="toolTip">
+    <string>Bright up the Image</string>
+   </property>
+  </action>
+  <action name="actionBrightDown">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/brightDOWN.jpg</normaloff>icons/brightDOWN.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>BrightDown</string>
+   </property>
+   <property name="toolTip">
+    <string>Bright Down the Image</string>
+   </property>
+  </action>
+  <action name="actionEdges">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/edges.jpg</normaloff>icons/edges.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Edges</string>
+   </property>
+   <property name="toolTip">
+    <string>highlights the edges</string>
+   </property>
+  </action>
+  <action name="actionRGBtoRW">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/RGBtoBW.jpg</normaloff>icons/RGBtoBW.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>RGBtoRW</string>
+   </property>
+   <property name="toolTip">
+    <string>Converts a color image to black and white.</string>
+   </property>
+  </action>
+  <action name="actionCrazy_Rainbow">
+   <property name="text">
+    <string>Crazy Rainbow</string>
+   </property>
+  </action>
+  <action name="actionPencilSketch">
+   <property name="text">
+    <string>PencilSketch</string>
+   </property>
+  </action>
+  <action name="actionPencilSketch">
+   <property name="text">
+    <string></string></string>
+   </property>
+  </action>
+  <action name="actionSepia">
+   <property name="text">
+    <string>Sepia</string>
+   </property>
+  </action>
+  <action name="actionHDR">
+   <property name="text">
+    <string>HDR</string>
+   </property>
+  </action>
+  <action name="actionBigger">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/bigger.jpg</normaloff>icons/bigger.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Bigger</string>
+   </property>
+   <property name="toolTip">
+    <string>Enlarge image preview</string>
+   </property>
+  </action>
+  <action name="actionexitp">
+   <property name="text">
+    <string>exitp</string>
+   </property>
+   <property name="toolTip">
+    <string>Exits the program.</string>
+   </property>
+  </action>
+  <action name="actionSmaller">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/smaller.jpg</normaloff>icons/smaller.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Smaller</string>
+   </property>
+   <property name="toolTip">
+    <string>Shrinks the image preview</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ikony.qrc"/>
+ </resources>
+ <connections/>
+</ui>
