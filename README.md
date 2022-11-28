@@ -1,4 +1,4 @@
-## Symplist
+## Symplist - Image Editor
 
 ```
 virtualenv env
